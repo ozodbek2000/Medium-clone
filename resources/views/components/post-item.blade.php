@@ -2,7 +2,7 @@
 
     <div class="flex-auto">
         <a href="#">
-            <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">Streamlining your design process today.</h5>
+            <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">{{ $post->title }}</h5>
         </a>
         <div class="mb-6 text-body">{{ Str::words($post->content, 20) }}</div>
         <a href="#">
@@ -14,8 +14,8 @@
     </div>
     <a class="flex-[0_0_160px]" href="#">
         <img
-            class="w-full h-full object-cover rounded-r-lg"
-            src="https://flowbite.com/docs/images/blog/image-1.jpg"
+            class="w-full max-h-64 h-full object-cover rounded-r-lg"
+            src="{{ Storage::url($post->image) }}"
             alt=""
         />
     </a>
