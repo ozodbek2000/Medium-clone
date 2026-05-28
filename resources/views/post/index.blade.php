@@ -14,15 +14,13 @@
             <div class=" mt-8 text-gray-900">
 
                 @forelse($posts as $p)
-
                     <x-post-item :post="$p "></x-post-item>
-
                 @empty
                     <div class="text-center text-gray-400 py-16">No posts found.</div>
                 @endforelse
 
             </div>
-            {{ $posts->onEachSide(1)->links() }}
+            {{ $posts->links() }}
         </div>
     </div>
 </x-app-layout>

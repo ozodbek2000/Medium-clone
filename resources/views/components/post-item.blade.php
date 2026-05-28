@@ -1,7 +1,10 @@
 <div class="flex gap-5 bg-neutral-primary-soft p-6 border border-default rounded-base shadow-xs my-4">
 
     <div class="flex-auto">
-        <a href="#">
+        <a href="{{ route('post.show', [
+            'username' => $post->user->username,
+            'post' => $post->slug
+        ]) }}">
             <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading">{{ $post->title }}</h5>
         </a>
         <div class="mb-6 text-body">{{ Str::words($post->content, 20) }}</div>
